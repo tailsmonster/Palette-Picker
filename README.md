@@ -1,5 +1,7 @@
 # 2.3.0 - Solo Project: Palette Picker (nico's fork)
 
+[![fefe](https://cdn3.emoji.gg/emojis/7381-fefe.png)](https://emoji.gg/emoji/7381-fefe)
+
 - [2.3.0 - Solo Project: Palette Picker](#230---solo-project-palette-picker)
 - [Project Description](#project-description)
 - [User Stories](#user-stories)
