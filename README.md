@@ -232,12 +232,12 @@ And don't forget that users need some confirmation of a copy, so alter the butto
 In order to see how well you're doing with this project, here are all the things we need would like to see from you. If you get all of these, then you know that you're where you need to be!
 
 ## Layout: Structure
-- [ ] There is a single `main` element on the page
-- [ ] There is a single `h1` element on the page
-- [ ] There is a `form`
-- [ ] The form has an `h2` label
-- [ ] The form has an `text` input and label for the palette title
-- [ ] The form has 3 `color` type inputs and labels for the color inputs
+- [x] There is a single `main` element on the page
+- [x] There is a single `h1` element on the page
+- [x] There is a `form`
+- [x] The form has an `h2` label
+- [x] The form has an `text` input and label for the palette title
+- [x] The form has 3 `color` type inputs and labels for the color inputs
 - [ ] The form has a `fieldset` with a `legend` for the temperature setting
 - [ ] The form has 3 `radio` inputs and `labels` for the temperature setting
 - [ ] The form has `neutral` as the default temperature setting

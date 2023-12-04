@@ -6,7 +6,7 @@
     <title>PalettePicker</title>
     
     <link rel="icon" type="image/svg+xml" href="/pensive.svg" />
-    <link src="" />
+    <!-- <link src="" /> -->
     
     <script type="module" src="src/main.js"></script>
   </head>
@@ -14,9 +14,24 @@
     <main>
         <h1>Palette Picker</h1>
 
-        <form action="">
-            <h2>Add a Palette</h2>
-            
+        <form id="palette-form" aria-label="palette-form">
+            <h2 id="add-palette-header">Add a Palette</h2>
+
+            <label for="palette-title">Name your palette</label>
+            <input type="text" id="palette-title" name="paletteTitle" placeholder="New Palette">
+
+            <label for="color-1">First Color</label>
+            <input type="color" id="color-1" name="color1">
+
+            <label for="color-2">Second Color</label>
+            <input type="color" id="color-2" name="color2">
+
+            <label for="color-3">Third Color</label>
+            <input type="color" id="color-3" name="color3">
+
+
+
+            <button></button>
         </form>
 
     </main>
