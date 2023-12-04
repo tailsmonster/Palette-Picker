@@ -1,4 +1,4 @@
-# 2.3.0 - Solo Project: Palette Picker (nico's fork)
+# 2.3.0 - Solo Project: Palette Picker
 
 - [2.3.0 - Solo Project: Palette Picker](#230---solo-project-palette-picker)
 - [Project Description](#project-description)
@@ -276,3 +276,9 @@ In order to see how well you're doing with this project, here are all the things
 - [ ] The project is created using Vite
 - [ ] The code exists in more than one JS file
 - [ ] The project is deployed via GitHub Pages properly
+- [ ] The `palettes.json` file is read properly
+- [ ] css flexbox or grid was used
+- [ ] The code does not render unescaped text directly to the DOM (createElement or other escape method used)
+- [ ] `.innerHTML` or `createElement/.append` is used properly at some point in the project
+- [ ] `.innerHTML` or `.remove()` is used to delete elements from the DOM.
+- [ ] The `setTimeout` method is used to rewrite the copy button text
