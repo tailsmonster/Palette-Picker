@@ -238,13 +238,13 @@ In order to see how well you're doing with this project, here are all the things
 - [x] The form has an `h2` label
 - [x] The form has an `text` input and label for the palette title
 - [x] The form has 3 `color` type inputs and labels for the color inputs
-- [ ] The form has a `fieldset` with a `legend` for the temperature setting
-- [ ] The form has 3 `radio` inputs and `labels` for the temperature setting
-- [ ] The form has `neutral` as the default temperature setting
-- [ ] The form has a `button` to submit the form
-- [ ] There is an `h2` showing the palettes section
-- [ ] There is a `section` for the palettes
-- [ ] The page has a `ul` and `li` items that show each palette
+- [x] The form has a `fieldset` with a `legend` for the temperature setting
+- [x] The form has 3 `radio` inputs and `labels` for the temperature setting
+- [x] The form has `neutral` as the default temperature setting
+- [x] The form has a `button` to submit the form
+- [x] There is an `h2` showing the palettes section
+- [x] There is a `section` for the palettes
+- [x] The page has a `ul` and `li` items that show each palette
 - [ ] Each palette has the 3 colors clearly visible somehow
 - [ ] Each palette has white and black text overlaid on each of the colors
 - [ ] Each palette *somehow* has white and black border on each of the colors
@@ -256,12 +256,12 @@ In order to see how well you're doing with this project, here are all the things
 - [ ] Palettes appear next to each other in a grid-like pattern (flex or grid presentations fine)
 
 ## layout: Accessibility
-- [ ] The form has an `aria-label` or `aria-labelledby` attribute that describes the form
-- [ ] The section has an `aria-label` or `aria-labelledby` attribute that describes the section
+- [x] The form has an `aria-label` or `aria-labelledby` attribute that describes the form
+- [x] The section has an `aria-label` or `aria-labelledby` attribute that describes the section
 - [ ] There are no instances of recreating any semantic elements
 
 ## Functionality
-- [ ] The title is a `required` field, and the form cannot be submitted without it
+- [x] The title is a `required` field, and the form cannot be submitted without it
 - [ ] Clicking the form submit button does not reload the page because the default behavior is prevented
 - [ ] Clicking the form submit button creates a new palette in the palettes section
 - [ ] Clicking the form submit button clears the form
@@ -275,6 +275,6 @@ In order to see how well you're doing with this project, here are all the things
 - [ ] A user's palettes are saved to localStorage
 
 ## Meta
-- [ ] The project is created using Vite
-- [ ] The code exists in more than one JS file
+- [x] The project is created using Vite
+- [x] The code exists in more than one JS file
 - [ ] The project is deployed via GitHub Pages properly
