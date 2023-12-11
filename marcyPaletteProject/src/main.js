@@ -1,7 +1,7 @@
 import './style.css'
 import { v4 as uuidv4 } from 'uuid';
 import { addPalette, removePalette} from './local-storage';
-import { renderPalettes } from './dom-utilities';
+import { renderAllPalettes } from './dom-utilities';
 // console.log(palettes); 
 
 
@@ -24,7 +24,7 @@ const handleFormSubmit = (e) => {
   };
 
   addPalette(newPalette)
-  renderPalettes();
+  renderAllPalettes();
 
   form.reset();
 }
