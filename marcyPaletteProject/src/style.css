@@ -1,4 +1,4 @@
-* {
+/* * {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -17,7 +17,7 @@ h1 {
 
 body {
   display: flex;
-  align-self: center;
+  align-items:center;
   color: #e5e5e5;
   background-color: #181818;
 }
@@ -30,5 +30,6 @@ form {
   flex-wrap: wrap;
   align-items: center;
   flex-direction: column;
-}
 
+}
+ */

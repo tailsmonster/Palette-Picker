@@ -4,48 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Palette Picker</title>
-    
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
-    <!-- <link src="" /> -->
-    
     <script type="module" src="src/main.js"></script>
   </head>
   <body>
-    <main>
-      <header>
+    <div id = "palettePicker">
+      <main>
         <h1>Palette Picker</h1>
-      </header>
-        <form id="palette-form" aria-label="palette-form">
-            <h2 id="add-palette-header">Add a Palette</h2>
 
-            <label for="palette-title">Name your palette: </label>
-            <input type="text" id="palette-title" name="paletteTitle" placeholder="New Palette">
-            
-            <label for="color-1">Color #1</label>
-            <input type="color" id="color-1" name="color1">
-            
-            <label for="color-2">Color #2</label>
-            <input type="color" id="color-2" name="color2">
-            
-            <label for="color-3">Color #3</label>
-            <input type="color" id="color-3" name="color3">
-            
-            <fieldset id="temperature">
-              <legend>Temperature</legend>
+        <!-- Form for making palettes -->
+        <form id="new-palette-form" aria-label="new-palette-form">
+          <h2>Create your Palette</h2>
+          <div> 
+            <!-- Name Palette -->
+              <label for="palette-title">Palette Name </label>
+              <input type="text" id="title" name="title" placeholder="New Palette" maxlength="10" required>
+            </div>
+            <div>
+              <!-- Add 3 Colors for Palette -->
+              <label for="color-1">Color #1</label>
+              <input type="color" id="color-1" name="color1" required>
+              
+              <label for="color-2">Color #2</label>
+              <input type="color" id="color-2" name="color2" required>
 
-              <input type="radio" value="cold" id="cold" name="temp"></input>
-              <label for="cold">Cool</label>
-
-              <input type="radio" value="neutral" id="neutral" name="temp"></input>
-              <label for="neutral" checked >Neutral</label>
-
-              <input type="radio" value="warm" id="warm" name="temp"></input>
-              <label for="warm">Warm</label>
-            </fieldset>
-
+              <label for="color-3">Color #3</label>
+              <input type="color" id="color-3" name="color3" required>
+            </div>
+            <div>
+              <!-- Choose temperature -->
+              <fieldset id="temperature">
+                <legend>Temperature</legend>
+                
+                <input type="radio" value="cold" id="cold" name="temperature"></input>
+                <label for="cold">Cool</label>
+                
+                <input type="radio" value="neutral" id="neutral" name="temperature"></input>
+                <label for="neutral" checked >Neutral</label>
+                
+                <input type="radio" value="warm" id="warm" name="temperature"></input>
+                <label for="warm">Warm</label>
+              </fieldset>
+            </div>
+            <!-- Submit Buttom -->
             <button>Submit</button>
-        </form>
+          </form>
 
-    </main>
+          <!-- Palette List -->
+          <section id="my-palettes" aria-label="my-palettes">
+            <h2>My Palettes</h2>
+            <ul id="palettes-list"></ul>
+          </section>
+      </main>
+    </div>
+    
   </body>
 </html>
