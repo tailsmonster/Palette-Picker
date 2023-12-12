@@ -1,13 +1,14 @@
-/* * {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-header {
+* {
+  /* box-sizing: border-box; */
+  font-family: Arial, Helvetica, sans-serif; 
   align-items: center;
   margin: 1rem;
   padding: 0;
 }
+
+/* header {
+
+} */
 
 h1 {
   font-size: 2rem;
@@ -22,7 +23,6 @@ body {
   background-color: #181818;
 }
 
-
 form {
   background-color: #333333;
   border-radius: 5%;
@@ -30,6 +30,14 @@ form {
   flex-wrap: wrap;
   align-items: center;
   flex-direction: column;
-
 }
- */
+
+li {
+  background-color: #2e5640;
+  border-radius: 5%;
+  display: flex;
+  flex-wrap: wrap;
+
+  flex-direction: row;
+}
+

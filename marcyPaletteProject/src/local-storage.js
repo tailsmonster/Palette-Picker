@@ -1,5 +1,7 @@
+import startingPalettes from './palettes.json'
+
 const setLocalStorageKey = (key, value) => {
-    localStorage.setItem(key, JSON.stringify(value))
+    localStorage.setItem(key, JSON.stringify(value));
   }
   
 const getLocalStorageKey = (key) => {
@@ -16,10 +18,17 @@ export const getPalettes = () => getLocalStorageKey('palettes');
 export const setPalettes = (palettes) => setLocalStorageKey('palettes', palettes);
   
 export const addPalette = (palette) => {
-    const palette = getPalettes();
+    const palettes = getPalettes();
     palettes.push(palette)
-    setNames(palettes);
+    setPalettes(palettes);
 }
 export const removePalette = (uuid) => {
     setPalettes(getPalettes().filter((palette) => palette.uuid !== uuid));
 }
+
+export const resetPalettes = () => setLocalStorageKey('palettes', startingPalettes);
+
+export const ifEmpty = () => { if (getPalettes().length < 1) resetPalettes();
+}
+
+ifEmpty();

@@ -2,42 +2,41 @@ import { getPalettes } from './local-storage'
 
 const colorDisplay = (colorCode) => {
     const colorBox = document.createElement('body');
-    const colorHex = document.createElement('p');
-    colorHex.innerHTML = '<span style="color: black;">peepee</span> poopoo';
-    colorHex.classList.add('color')
-    colorHex.style.background=colorCode
+    const colorName = document.createElement('p');
 
-    const colorCopy = document.createElement('p');
-    colorCopy.innerText = `Copy \n${colorCode}`;
-    colorCopy.classList.add('color-copy');
-    colorCopy.dataset.color = colorCode;
+    colorName.innerHTML = '<span style="color: white;">'+colorCode+'</span>';
+    colorName.classList.add('color-text');
+    colorName.style.background = colorCode;
 
-    colorContainer.classList.add('color-container');
-    colorContainer.append(colorText, colorCopy);
-    return colorContainer;
+    colorBox.classList.add('color-container');
+    colorBox.append(colorName);
+    return colorBox;
 }
 
-const renderSinglePalette = (x, data) => {
-    const { title, color1, color2, color3, temperature, uuid } = data
+const renderSinglePalette = (parent, data) => {
+    const { title, colors, temperature, uuid } = data
     //palette title
     const li = document.createElement('li');
     li.dataset.uuid = uuid;
-    const h2 = document.createElement('h2');
-    h2.innerText = title;
+    const h4 = document.createElement('h4');
+    h4.innerText = title;
 
     //colors
-    li.append(h3);
-    colors.forEach((color) => li.append(createColorDiv(color)))
+    li.append(h4);
+    colors.forEach((color) => li.append(colorDisplay(color)));
 
     //temps
-    const temperatureText = document.createElement('h5');
-    temperatureText.innerText = temperature;
-    temperatureText.classList.add('temperature')
-    temperatureText.classList.add(temperature)
+    const tempText = document.createElement('p');
+    tempText.innerText = temperature;
+    tempText.classList.add('temperature')
+    tempText.classList.add(temperature)
+    li.append(tempText);
+    parent.append(li);
 }
 
-const renderAllPalettes = () => {
+export const renderAllPalettes = () => {
     const palettes = getPalettes();
     const ul = document.querySelector('#palettes-list');
     ul.innerHTML = '';
+    palettes.forEach((palette) => renderSinglePalette(ul, palette));
 }
