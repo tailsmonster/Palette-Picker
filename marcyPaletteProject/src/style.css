@@ -1,45 +1,25 @@
 
 * {
   font-family: Arial, Helvetica, sans-serif; 
-  color: white;
-  background-color: #181818;
-  margin: auto;
+  /* color: white; */
+  /* background-color: #181818; */
+  margin-right: auto;
 }
 
-h1 {
-  font-size: 2rem;
-  line-height: 1.1;
-  font-weight: bold;
+.websiteheader {
 
+  /* font-size: 2rem; */
+  /* font-weight: bold; */
+  background-color: black;
 }
+/* Da 2 Columns */
 .row {
   display: flex;
 }
-
 .left {
-  flex: 30%;
+  flex: 50%;
 }
 .right {
-  flex: 70%;
+  flex: 50%;
 }
 
-
-
-
-
-form {
-  color: #333333;
-  border-radius: 5%;
-  display: flex;
-  flex-wrap: wrap;
-
-  flex-direction: column;
-}
-
-li {
-  background-color: #333333;
-  border-radius: 5%;
-  display: flex;
-  /* flex-wrap: wrap; */
-  flex-direction: column;
-} 
