@@ -9,18 +9,18 @@
   </head>
   <body>
     <div id = "palettePicker">
-      <main>
-        <h1>Palette Picker</h1>
-
-        <!-- Form for making palettes -->
-        <form id="new-palette-form" aria-label="new-palette-form">
-          <h2>Create your Palette</h2>
-          <div> 
-            <!-- Name Palette -->
+      <main class="row">
+        <div id="palette-form" class="left">
+          <h1>Palette Picker</h1>
+          <!-- Form for making palettes -->
+          <form id="new-palette-form" aria-label="new-palette-form">
+            <h2>Create your Palette</h2>
+            <div> 
+              <!-- Name Palette -->
               <label for="palette-title">Palette Name</label>
               <input type="text" id="title" name="title" placeholder="New Palette" maxlength="10" required>
             </div>
-            <div>
+            <div id="colors">
               <!-- Add 3 Colors for Palette -->
               <label for="color-1">Color #1</label>
               <input type="color" id="color-1" name="color1" required>
@@ -32,7 +32,7 @@
               <input type="color" id="color-3" name="color3" required>
             </div>
             <div>
-              <!-- Choose temperature -->
+                <!-- Choose temperature -->
               <fieldset id="temperature">
                 <legend>Temperature</legend>
                 
@@ -49,12 +49,15 @@
             <!-- Submit Buttom -->
             <button>Submit</button>
           </form>
+        </div>
 
+        <div id="list" class="right"> 
           <!-- Palette List -->
           <section id="my-palettes" aria-label="my-palettes">
             <h2>My Palettes</h2>
             <ul id="palettes-list"></ul>
           </section>
+        </div>
       </main>
     </div>
 
