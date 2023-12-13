@@ -10,7 +10,7 @@ const handleDeletion = (e) => {
 }
 
 const handleUlClick = (e) => {
-
+  console.log("penis")
 }
 
 const handleSubmit = (e) => {

@@ -14,7 +14,7 @@ const getLocalStorageKey = (key) => {
   }
 
   //focused helper functons
-export const getPalettes = () => getLocalStorageKey('palettes');
+export const getPalettes = () => getLocalStorageKey('palettes') || [];
 export const setPalettes = (palettes) => setLocalStorageKey('palettes', palettes);
   
 export const addPalette = (palette) => {
@@ -28,7 +28,6 @@ export const removePalette = (uuid) => {
 
 export const resetPalettes = () => setLocalStorageKey('palettes', startingPalettes);
 
-export const ifEmpty = () => { if (getPalettes().length < 1) resetPalettes();
-}
+export const ifEmpty = () => { if (getPalettes().length < 1) resetPalettes();}
 
 ifEmpty();

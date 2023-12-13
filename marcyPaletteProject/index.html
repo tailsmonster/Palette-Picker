@@ -8,30 +8,37 @@
     <script type="module" src="src/main.js"></script>
   </head>
   <body>
-    <div id = "palettePicker">
+    <div id="palettePicker">
       <main class="row">
-        <div id="palette-form" class="left">
-          <div id="websiteheader">
+        <aside class="left">
+          <div class="header">
             <h1>Palette Picker</h1>
           </div>
-          <!-- Form for making palettes -->
-          <form id="new-palette-form" aria-label="new-palette-form">
-            <h2>Create your Palette</h2>
-            <div> 
+          <div id="palette-form">
+            <!-- Form for making palettes -->
+            <form id="new-palette-form" aria-label="new-palette-form">
+              <h2>Create your Palette</h2>
+              <div> 
               <!-- Name Palette -->
               <label for="palette-title">Palette Name</label>
               <input type="text" id="title" name="title" placeholder="New Palette" maxlength="10" required>
             </div>
             <div id="colors">
               <!-- Add 3 Colors for Palette -->
-              <label for="color-1">Color #1</label>
-              <input type="color" id="color-1" name="color1" required>
-              
-              <label for="color-2">Color #2</label>
-              <input type="color" id="color-2" name="color2" required>
-
-              <label for="color-3">Color #3</label>
-              <input type="color" id="color-3" name="color3" required>
+              <ul>
+                <li>
+                  <label for="color-1">Color #1</label>
+                  <input type="color" id="color-1" name="color1" required>
+                </li>
+                <li>
+                  <label for="color-2">Color #2</label>
+                  <input type="color" id="color-2" name="color2" required>
+                </li>
+                <li>
+                  <label for="color-3">Color #3</label>
+                  <input type="color" id="color-3" name="color3" required>
+                </li>
+              </ul>
             </div>
             <div>
                 <!-- Choose temperature -->
@@ -52,14 +59,15 @@
             <button>Submit</button>
           </form>
         </div>
-
-        <div id="list" class="right"> 
-          <!-- Palette List -->
-          <section id="my-palettes" aria-label="my-palettes">
-            <h2>My Palettes</h2>
-            <ul id="palettes-list"></ul>
-          </section>
-        </div>
+      </aside>
+        <aside class="right">
+          <div id="list" > 
+            <!-- Palette List -->
+            <section id="my-palettes" aria-label="my-palettes">
+              <ul id="palettes-list"></ul>
+            </section>
+          </div>
+        </aside>
       </main>
     </div>
 
