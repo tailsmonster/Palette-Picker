@@ -67,3 +67,5 @@ export const renderAllPalettes = () => {
     ul.innerHTML = '';
     palettes.forEach((palette) => renderSinglePalette(ul, palette));
 }
+
+export const getEl = (htmlEl) => document.querySelector(htmlEl);

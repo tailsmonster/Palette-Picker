@@ -1,12 +1,11 @@
 import './style.css'
 import { v4 as uuidv4 } from 'uuid';
 import { addPalette, removePalette} from './local-storage';
-import { renderAllPalettes as renderPalettes } from './dom-utilities';
+import { getEl, renderAllPalettes as renderPalettes } from './dom-utilities';
 
 
 //helper functions
 const handleDeletion = (e) => {
-  
 }
 
 const handleUlClick = (e) => {
@@ -36,8 +35,7 @@ const handleSubmit = (e) => {
 //runner function
 const main = () => {
   renderPalettes();
-  
-  const ul = document.querySelector('#palettes-list');
+  const ul = getEl('#palettes-list');
   ul.addEventListener('click', handleUlClick);
   const form = document.querySelector("#new-palette-form");
   form.addEventListener('submit', handleSubmit);
