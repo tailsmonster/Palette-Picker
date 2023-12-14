@@ -55,11 +55,11 @@ h2 {
 menu {
   background: #646464;
   border-radius: 10px;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-top: 7rem;
-  margin-bottom: 5rem;
+
   height: 100%;
+  width: 400px;
+  margin: auto;
+  padding: 0 0 1rem 0rem;
 }
 
 #formHeading {
@@ -98,9 +98,7 @@ input[type=text] {
 
 }
 
-.palette-form {
-  padding: 0;
-}
+
 
 #palette-title, #colors, #temperature, #submit-button {
   padding: 1rem;
