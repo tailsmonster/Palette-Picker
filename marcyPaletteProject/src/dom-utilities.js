@@ -1,20 +1,32 @@
-import { getPalettes } from './local-storage'
+import { getPalettes, removePalette } from './local-storage'
 
 const colorDisplay = (colorCode) => {
-    const colorBox = document.createElement('body');
-    const colorName = document.createElement('p');
-
-    colorName.innerHTML = '<span style="color: white;">'+colorCode+'</span>';
-    colorName.classList.add('color-name');
-    colorName.style.background = colorCode;
-
+    // Outer color box
+    const colorBox = document.createElement('div');
     colorBox.classList.add('color-container');
-    colorBox.append(colorName);
+    colorBox.style.background = colorCode;
+
+    // Inner gray box
+    const colorLabel = document.createElement('div');
+    colorLabel.classList.add('color-label');
+    colorLabel.innerText = colorCode;
+    colorLabel.addEventListener('click', () => {
+        navigator.clipboard.writeText(colorCode).then(() => {
+            colorLabel.innerText = "Copied!";
+            setTimeout(() => {
+                colorLabel.innerText = colorCode; // Revert after 1 sec
+            }, 1000);
+        }).catch(err => console.error('Failed to copy:', err));
+    });
+
+    // Append inner box to outer box
+    colorBox.append(colorLabel);
+
     return colorBox;
-}
+};
 
 const temperatureColor = (temperatureData) => {
-    const colorBox = document.createElement('body');
+    // const colorBox = document.createElement('body');
     let colorCode;
     if (temperatureData === 'cool') {
         colorCode = '#151E41';
@@ -26,40 +38,43 @@ const temperatureColor = (temperatureData) => {
         colorCode = '#3D1514';
     }
 
-    colorBox.classList.add('color-container');
-    colorBox.style.background = colorCode;
-    colorBox.append(colorCode);
-    
-    return colorBox;
+    return colorCode;
 } 
 
 
 const renderSinglePalette = (parent, data) => {
     const { title, colors, temperature, uuid } = data;
-    const li = document.createElement('li');
-    li.dataset.uuid = uuid;
+
+    // Palette container
+    const paletteDiv = document.createElement('div');
+    paletteDiv.classList.add('palette');
+    paletteDiv.dataset.uuid = uuid;
+
+    // Title & Button TitleBar
+    const titlebarDiv = document.createElement('div');
+    titlebarDiv.classList.add('titlebar');
+    titlebarDiv.style.background = temperatureColor(temperature);
+
     const h2 = document.createElement('h2');
     h2.innerText = title;
-    const div = document.createElement('div')
-    div.dataset.uuid = temperature;
+    h2.classList.add('palette-title');
+    
+    const deleteBtn = document.createElement('button');
+    deleteBtn.innerText = '✖';
+    deleteBtn.classList.add('delete-btn');
+    deleteBtn.onclick = () => removePalette(uuid);
+    titlebarDiv.append(h2, deleteBtn);
+    
+    // Colors container
+    const colorsDiv = document.createElement('div');
+    colorsDiv.classList.add('colors');
+    colors.forEach((color) => colorsDiv.append(colorDisplay(color)));
 
-    //temps
-    const tempText = document.createElement('p');
-    tempText.innerText = temperature;
-    tempText.classList.add('temperature')
-    tempText.classList.add(temperature)
-    div.append(tempText);
-    parent.append(li);
+    // Append elements
+    paletteDiv.append(titlebarDiv, colorsDiv);
     
-    
-    //colors
-    li.append(h2);
-    colors.forEach((color) => li.append(colorDisplay(color)));
-    
-    //temps
-    li.append(temperatureColor(temperature));
-
-}
+    parent.append(paletteDiv);
+};
 
 export const renderAllPalettes = () => {
     const palettes = getPalettes();

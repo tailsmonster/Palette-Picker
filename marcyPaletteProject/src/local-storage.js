@@ -24,10 +24,17 @@ export const addPalette = (palette) => {
 }
 export const removePalette = (uuid) => {
     setPalettes(getPalettes().filter((palette) => palette.uuid !== uuid));
+    // Remove from the DOM
+    const paletteElement = document.querySelector(`[data-uuid="${uuid}"]`);
+    if (paletteElement) {
+        paletteElement.remove();
+    }
+};
+
+export const resetPalettes = () => {
+  setLocalStorageKey('palettes', startingPalettes);
+  setPalettes(getPalettes());
 }
-
-export const resetPalettes = () => setLocalStorageKey('palettes', startingPalettes);
-
 export const ifEmpty = () => { if (getPalettes().length < 1) resetPalettes();}
 
 ifEmpty();

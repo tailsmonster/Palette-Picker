@@ -1,0 +1,68 @@
+.palette {
+  display: flex;
+  flex-direction: column;
+  /* border-radius: 5px; */
+  outline: 5px solid black;
+  margin: 3em;
+  position: relative;
+}
+
+.titlebar {
+  padding: 1vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.palette-title {
+  font-size: 20px;
+  font-style: italic;
+  /* margin-bottom: 5px; */
+  color: white;
+}
+
+.colors {
+  display: flex;
+  justify-content: space-between;
+}
+
+.color-container {
+  width: 100%;
+  height: 8vh;
+  /* border-radius: 5px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  outline: 5px solid black;
+}
+
+.color-label {
+  width: 100;
+  height: 25px;
+  background: gray;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-radius: 5px; */
+  padding: 4px;
+}
+
+.temperature {
+  width: 100%;
+  height: 5px;
+  margin-top: 5px;
+}
+
+.delete-btn {
+  background: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+}

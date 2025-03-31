@@ -1,4 +1,4 @@
-
+@import url(./palette.css);
 * {
   font-family: Arial, Helvetica, sans-serif; 
   color: #e5e5e5; 
@@ -30,13 +30,17 @@ body{
 
 .header {
   
-  padding-top: 1;
-  padding-bottom: 1rem;
+  /* padding-top: 1;
+  padding-bottom: 1rem; */
+  padding: 2vh;
   background-color:#3E1927;
 }
 h1 {
-  margin: auto;
-  font-size: 2.5rem;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  
+  font-size: 3rem;
   font-style: italic;
   font-weight: bold;
 }
@@ -54,7 +58,7 @@ h2 {
 
 menu {
   background: #646464;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 
   height: 100%;
   width: 400px;
@@ -62,19 +66,29 @@ menu {
   padding: 0 0 1rem 0rem;
 }
 
+
+.header {
+  display:flex;
+  width: 100%;
+  /* justify-content: center; */
+  /* align-items: center; */
+
+}
 #formHeading {
   display: flex;
   width: 100%;
   background-color:#3E1927;
   justify-content: center;
   align-items: center;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  /* border-top-left-radius: 10px; */
+  /* border-top-right-radius: 10px; */
+  outline: 5px solid black;
+
 }
 
 #formContent {
   padding: 0;
-  border-radius:2%;
+  /* border-radius:2%; */
   font-size:small;
   background: #333333;
 
@@ -93,11 +107,14 @@ input[type=text] {
   border: 1px solid ;
   width:200px;
   padding:3px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   background-color: #3B3B3B;
 
 }
 
+button {
+  color:black;
+}
 
 
 #palette-title, #colors, #temperature, #submit-button {
@@ -111,6 +128,10 @@ input[type=text] {
   overflow: auto;
 }
 
+menu {
+  outline: 5px solid black;
+
+}
 
 
 
