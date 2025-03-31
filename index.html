@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palette Picker</title>
+    <link rel="icon" type="image/svg+xml" href="/Palette-Picker/icon.svg" />
+    <script type="module" crossorigin src="/Palette-Picker/assets/index-BOSR8544.js"></script>
+    <link rel="stylesheet" crossorigin href="/Palette-Picker/assets/index-Ccga3n6a.css">
+  </head>
+  <body>
+    <div id="app">
+      <main class="row">
+        <aside class="left">
+          <nav class="header">
+            <br>
+            <h1>Palette Picker</h1>
+          </nav>
+
+
+          <div id="palette-form">
+            <form id="new-palette-form" aria-label="new-palette-form">
+              <menu class="palette-form">
+                <section id="formHeading">
+                  <h2>Create your Palette</h2>
+                </section>
+                <section id="formContent">
+                  <div id="palette-title"> 
+                    <label for="palette-title">Palette Title:</label>
+                    <input type="text" id="title" name="title" placeholder="New Palette" maxlength="10" required>
+                  </div>
+                  <div id="colors">
+                    <ul>
+                      <li>
+                        <label for="color-1">Color #1</label>
+                        <input type="color" id="color-1" name="color1" required>
+                      </li>
+                      <li>
+                        <label for="color-2">Color #2</label>
+                        <input type="color" id="color-2" name="color2" required>
+                      </li>
+                      <li>
+                        <label for="color-3">Color #3</label>
+                        <input type="color" id="color-3" name="color3" required>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <fieldset id="temperature">
+                      <legend>Temperature</legend>
+                    
+                      <input type="radio" value="cool" id="cool" name="temperature"></input>
+                      <label for="cool">Cool</label>
+                    
+                      <input type="radio" value="neutral" id="neutral" name="temperature" checked></input>
+                      <label for="neutral" >Neutral</label>
+                    
+                      <input type="radio" value="warm" id="warm" name="temperature"></input>
+                      <label for="warm">Warm</label>
+                    </fieldset>
+                  </div>
+                  <div id="submit-button">
+                    <button>Create the palette</button>
+                  </div>
+                </section>
+              </menu>
+            </form>
+          </div>
+          <!-- <div class="form-spacer"></div> -->
+          <footer>
+            <h4 style="display: flex; justify-content: center; width: 100%; ">Created by Nico Aroca - 2023</h4>
+          </footer>
+        </aside>
+        <aside class="right">
+          <div id="list" > 
+            <!-- Palette List -->
+            <section id="my-palettes" aria-label="my-palettes">
+              <ul id="palettes-list"></ul>
+            </section>
+          </div>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>
